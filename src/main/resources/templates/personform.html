@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="col-md-4 col-sm-offset-4">
+    <form th:action="@{/processperson}"
+          th:object="${person}"
+          th:method="post">
+        <div class="col-md-3">
+          <input type="hidden" th:field="*{id}" />
+        </div>
+
+        <div class="col-md-3">Add a Person</div>
+        <br />
+        <div class="col-md-3">
+            <label for="firstname">First Name:</label>
+            <input type="text" th:field="*{firstname}" class="form-control" id="firstname"></input>
+        </div>
+        <div class="col-md-3">
+            <label for="lastname">Last Name:</label>
+            <input type="text" th:field="*{lastname}" class="form-control" id="lastname"></input>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+</html>
+</body>
+</html>

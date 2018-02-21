@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h2>Person</h2>
+<div th:each="person  : ${persons}">
+    <span th:text="${person.firstname}"></span><br />
+    <span th:text="${person.lastname}"></span><br />
+
+    <br />
+</div>
+
+
+</body>
+</html>
